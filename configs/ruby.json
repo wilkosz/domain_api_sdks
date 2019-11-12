@@ -1,0 +1,16 @@
+{
+    "gemName" : "domain_client",
+    "gemVersion" : "1.0.0",
+    "gemSummary" : "Swagger 2.0 Implementation of domain.com.au API",
+    "gemDescription" : "Swagger 2.0 Implementation of domain.com.au API",
+    "gemAuthor" : "Joshua Wilkosz",
+    "gemAuthorEmail" : "joshua@wilkosz.com.au",
+    "gemHomepage" : "https://github.com/wilkosz/domain_api_sdks/tree/master/ruby",
+    "moduleName" : "DomainClient",
+    "packageName": "DomainClient",
+    "apiPackage" : "DomainClientApi",
+    "modelPackage" : "DomainClientModel",
+    "invokerPackage" : "DomainClient",
+    "packagePath" : "DomainClient",
+    "variableNamingConvention" : "snake_case"
+}

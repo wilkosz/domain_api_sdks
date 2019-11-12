@@ -1,0 +1,40 @@
+# DomainClient::DomainSearchServiceV2ModelDomainSearchWebApiV2ModelsSearchParameters
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**listing_type** | **String** |  | [optional] 
+**property_types** | **Array&lt;String&gt;** |  | [optional] 
+**property_features** | **Array&lt;String&gt;** |  | [optional] 
+**listing_attributes** | **Array&lt;String&gt;** |  | [optional] 
+**property_established_type** | **String** |  | [optional] 
+**min_bedrooms** | **Float** |  | [optional] 
+**max_bedrooms** | **Float** |  | [optional] 
+**min_bathrooms** | **Float** |  | [optional] 
+**max_bathrooms** | **Float** |  | [optional] 
+**min_carspaces** | **Integer** |  | [optional] 
+**max_carspaces** | **Integer** |  | [optional] 
+**min_price** | **Integer** |  | [optional] 
+**max_price** | **Integer** |  | [optional] 
+**min_land_area** | **Integer** |  | [optional] 
+**max_land_area** | **Integer** |  | [optional] 
+**advertiser_ids** | **Array&lt;Integer&gt;** |  | [optional] 
+**ad_ids** | **Array&lt;Integer&gt;** |  | [optional] 
+**exclude_ad_ids** | **Array&lt;Integer&gt;** |  | [optional] 
+**locations** | [**Array&lt;DomainSearchServiceV2ModelDomainSearchWebApiV2ModelsSearchLocation&gt;**](DomainSearchServiceV2ModelDomainSearchWebApiV2ModelsSearchLocation.md) |  | [optional] 
+**location_terms** | **String** |  | [optional] 
+**keywords** | **Array&lt;String&gt;** |  | [optional] 
+**new_dev_only** | **BOOLEAN** |  | [optional] 
+**inspection_from** | **DateTime** |  | [optional] 
+**inspection_to** | **DateTime** |  | [optional] 
+**auction_from** | **DateTime** |  | [optional] 
+**auction_to** | **DateTime** |  | [optional] 
+**rural_only** | **BOOLEAN** |  | [optional] 
+**exclude_price_withheld** | **BOOLEAN** |  | [optional] 
+**sort** | [**DomainSearchServiceV2ModelSystemNullableDomainSearchWebApiV2ModelsSortBy**](DomainSearchServiceV2ModelSystemNullableDomainSearchWebApiV2ModelsSortBy.md) |  | [optional] 
+**page** | **Integer** |  | [optional] 
+**page_size** | **Integer** |  | [optional] 
+**geo_window** | [**DomainSearchServiceV2ModelDomainSearchWebApiV2ModelsGeoWindow**](DomainSearchServiceV2ModelDomainSearchWebApiV2ModelsGeoWindow.md) |  | [optional] 
+**updated_since** | **DateTime** |  | [optional] 
+
+
