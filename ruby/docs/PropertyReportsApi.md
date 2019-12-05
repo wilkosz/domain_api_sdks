@@ -1,6 +1,6 @@
 # DomainClient::PropertyReportsApi
 
-All URIs are relative to *http://localhost:52361*
+All URIs are relative to *https://api.domain.com.au*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

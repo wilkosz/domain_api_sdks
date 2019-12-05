@@ -15,7 +15,5 @@ Name | Type | Description | Notes
 **display_price** | **String** |  | [optional] 
 **bond** | **Float** |  | [optional] 
 **price_reduction** | **BOOLEAN** |  | [optional] 
-**price_from_per_sqm** | **Integer** |  | [optional] 
-**price_to_per_sqm** | **Integer** |  | [optional] 
 
 

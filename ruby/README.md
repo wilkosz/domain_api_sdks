@@ -86,7 +86,7 @@ end
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://localhost:52361*
+All URIs are relative to *https://api.domain.com.au*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -341,21 +341,21 @@ Class | Method | HTTP request | Description
 
 - **Type**: OAuth
 - **Flow**: implicit
-- **Authorization URL**: https://stage-auth.domain.com.au/v1/connect/authorize
+- **Authorization URL**: https://auth.domain.com.au/v1/connect/authorize
 - **Scopes**: 
-  - api_properties_read: api_properties_read
-  - api_demographics_read: api_demographics_read
-  - api_statistics_write: api_statistics_write
-  - api_suburbperformance_read: api_suburbperformance_read
-  - api_listings_read: api_listings_read
-  - api_listings_write: api_listings_write
   - api_propertyreports_read: api_propertyreports_read
-  - api_salesresults_read: api_salesresults_read
-  - api_agencies_read: api_agencies_read
-  - api_locations_read: api_locations_read
   - api_addresslocators_read: api_addresslocators_read
   - api_enquiries_read: api_enquiries_read
   - api_enquiries_write: api_enquiries_write
-  - api_agencies_write: api_agencies_write
+  - api_properties_read: api_properties_read
+  - api_listings_read: api_listings_read
+  - api_listings_write: api_listings_write
+  - api_locations_read: api_locations_read
+  - api_agencies_read: api_agencies_read
   - api_webhooks_write: api_webhooks_write
+  - api_suburbperformance_read: api_suburbperformance_read
+  - api_salesresults_read: api_salesresults_read
+  - api_statistics_write: api_statistics_write
+  - api_agencies_write: api_agencies_write
+  - api_demographics_read: api_demographics_read
 

@@ -128,8 +128,8 @@ module DomainClient
     attr_accessor :force_ending_format
 
     def initialize
-      @scheme = 'http'
-      @host = 'localhost:52361'
+      @scheme = 'https'
+      @host = 'api.domain.com.au'
       @base_path = ''
       @api_key = {}
       @api_key_prefix = {}

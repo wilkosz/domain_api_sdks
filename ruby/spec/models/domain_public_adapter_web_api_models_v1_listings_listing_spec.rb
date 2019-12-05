@@ -45,7 +45,7 @@ describe 'DomainPublicAdapterWebApiModelsV1ListingsListing' do
   describe 'test attribute "property_types"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('Array<String>', ["unknown", "acreageSemiRural", "apartmentUnitFlat", "aquaculture", "blockOfUnits", "carspace", "dairyFarming", "developmentLand", "developmentSite", "duplex", "farm", "fishingForestry", "homeBased", "newHomeDesigns", "hotelLeisure", "house", "newHouseLand", "industrialWarehouse", "irrigationServices", "newLand", "livestock", "international", "medicalConsulting", "newApartments", "offices", "parkingCarSpace", "penthouse", "retail", "retirement", "rural", "ruralCommercialFarming", "semiDetached", "showroomsBulkyGoods", "specialistFarm", "studio", "terrace", "townhouse", "vacantLand", "villa", "servicedOffices", "other", "chickenShop", "seafoodShop", "deliCafe", "cropping", "viticulture", "mixedFarming", "grazing", "horticulture", "equine", "farmlet", "orchard", "ruralLifestyle", "onlineBusiness"])
+      # validator = Petstore::EnumTest::EnumAttributeValidator.new('Array<String>', ["unknown", "accessoriesParts", "accommodationTourism", "accounting", "acreageSemiRural", "adult", "advertisingMarketing", "aerial", "aeronautical", "agedCare", "agricultural", "air", "aircraft", "alarms", "alcoholLiquor", "amusements", "animalRelated", "apartmentUnitFlat", "aquaculture", "aquaticMarineMarinaBerth", "artsCrafts", "autoElectrical", "automotive", "backpackerHostel", "bakery", "barsNightclubs", "beautyHealth", "beautyProducts", "beautySalon", "bikeAndMotorcycle", "blockOfUnits", "boardingKennels", "boatsMarineMarinaBerth", "bookkeeping", "brokerage", "builder", "buildingAndConstruction", "bus", "butcher", "cafeCoffeeShop", "car", "carBusTruck", "carDealership", "carRental", "carspace", "carWash", "caravanPark", "carpenter", "catering", "childCare", "civil", "cleaning", "cleaningAndMaintenance", "clinicalPractice", "clothingAccessories", "clothingFootwear", "communication", "communications", "computerIT", "computerAndInternet", "construction", "convenienceStore", "copyLaminate", "courier", "cropHarvesting", "customs", "dairyFarming", "deli", "dental", "detailing", "developmentLand", "developmentSite", "distributors", "drivingSchools", "duplex", "educationTraining", "educational", "electrical", "employmentRecruitment", "entertainment", "entertainmentTechnology", "export", "farm", "farming", "fertiliser", "finance", "financialServices", "fishingForestry", "floristNursery", "foodBeverage", "foodBeverageHospitality", "franchiseBusinessOpportunities", "freight", "fruitVegFreshProduce", "fruitPicking", "functionCentre", "furnitureTimber", "gambling", "gardenHousehold", "gardenNurseries", "gardening", "glassCeramic", "guestHouseBB", "hairdresser", "healthBeauty", "healthSpa", "hire", "homeGarden", "homeBased", "newHomeDesigns", "homewareHardware", "hospital", "hotel", "hotelLeisure", "house", "newHouseLand", "huntingTrap", "import", "importExportWholesale", "industrialManufacturing", "industrialWarehouse", "insemination", "insurance", "internet", "irrigationServices", "juiceBar", "landClearing", "newLand", "landscaping", "laundryDryCleaning", "legal", "leisureEntertainment", "limousineTaxi", "livestock", "international", "machinery", "machineryMetal", "managementRights", "manufacturers", "manufacturingEngineering", "marine", "massage", "mechanicalRepair", "media", "medical", "medicalConsulting", "medicalPractice", "miningEarthMoving", "mobileServices", "motel", "motorcycle", "musicRelated", "mustering", "nails", "naturalTherapies", "newApartments", "newsagency", "nursery", "nursingHome", "offices", "officeSupplies", "oilGas", "panelBeating", "paperPrinting", "parkingCarSpace", "penthouse", "pestRelated", "pharmacies", "plastic", "plumbing", "poolWater", "postOffices", "printPhoto", "professional", "propertyRealEstate", "rail", "recreationSport", "recruitment", "repair", "resort", "restaurant", "retail", "retailer", "retirement", "retirementVillage", "road", "rural", "ruralCommercialFarming", "scientific", "sea", "security", "semiDetached", "serviceStation", "services", "shearing", "showroomsBulkyGoods", "specialistFarm", "sportsComplexGym", "studio", "supermarket", "takeawayFood", "taxi", "terrace", "themePark", "tours", "townhouse", "training", "transportDistribution", "travel", "truck", "vacantLand", "vending", "villa", "water", "welding", "wholesale", "wholesalers", "woolClassing", "wreckers", "servicedOffices", "other", "alcoholGrocery", "cafeRestaurants", "discountStore", "ecoFriendly", "green", "grocery", "specialityRetail", "storage", "travelAgency", "varietyStore", "chickenShop", "seafoodShop", "deliCafe", "cropping", "viticulture", "mixedFarming", "grazing", "horticulture", "equine", "farmlet", "orchard", "ruralLifestyle", "onlineBusiness"])
       # validator.allowable_values.each do |value|
       #   expect { @instance.property_types = value }.not_to raise_error
       # end
@@ -154,6 +154,12 @@ describe 'DomainPublicAdapterWebApiModelsV1ListingsListing' do
     end
   end
 
+  describe 'test attribute "date_listed"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   describe 'test attribute "date_purged"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -257,12 +263,6 @@ describe 'DomainPublicAdapterWebApiModelsV1ListingsListing' do
   end
 
   describe 'test attribute "sale_details"' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  describe 'test attribute "deleted"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

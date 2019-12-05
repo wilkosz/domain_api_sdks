@@ -38,10 +38,6 @@ module DomainClient
 
     attr_accessor :price_reduction
 
-    attr_accessor :price_from_per_sqm
-
-    attr_accessor :price_to_per_sqm
-
     class EnumAttributeValidator
       attr_reader :datatype
       attr_reader :allowable_values
@@ -78,9 +74,7 @@ module DomainClient
         :'can_display_price' => :'canDisplayPrice',
         :'display_price' => :'displayPrice',
         :'bond' => :'bond',
-        :'price_reduction' => :'priceReduction',
-        :'price_from_per_sqm' => :'priceFromPerSqm',
-        :'price_to_per_sqm' => :'priceToPerSqm'
+        :'price_reduction' => :'priceReduction'
       }
     end
 
@@ -98,9 +92,7 @@ module DomainClient
         :'can_display_price' => :'BOOLEAN',
         :'display_price' => :'String',
         :'bond' => :'Float',
-        :'price_reduction' => :'BOOLEAN',
-        :'price_from_per_sqm' => :'Integer',
-        :'price_to_per_sqm' => :'Integer'
+        :'price_reduction' => :'BOOLEAN'
       }
     end
 
@@ -160,14 +152,6 @@ module DomainClient
 
       if attributes.has_key?(:'priceReduction')
         self.price_reduction = attributes[:'priceReduction']
-      end
-
-      if attributes.has_key?(:'priceFromPerSqm')
-        self.price_from_per_sqm = attributes[:'priceFromPerSqm']
-      end
-
-      if attributes.has_key?(:'priceToPerSqm')
-        self.price_to_per_sqm = attributes[:'priceToPerSqm']
       end
     end
 
@@ -236,9 +220,7 @@ module DomainClient
           can_display_price == o.can_display_price &&
           display_price == o.display_price &&
           bond == o.bond &&
-          price_reduction == o.price_reduction &&
-          price_from_per_sqm == o.price_from_per_sqm &&
-          price_to_per_sqm == o.price_to_per_sqm
+          price_reduction == o.price_reduction
     end
 
     # @see the `==` method
@@ -250,7 +232,7 @@ module DomainClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [hidden_reasons, gst_option, price_type, price_unit, price, price_from, price_to, price_prefix, can_display_price, display_price, bond, price_reduction, price_from_per_sqm, price_to_per_sqm].hash
+      [hidden_reasons, gst_option, price_type, price_unit, price, price_from, price_to, price_prefix, can_display_price, display_price, bond, price_reduction].hash
     end
 
     # Builds the object from hash

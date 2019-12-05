@@ -20,7 +20,11 @@ module DomainClient
 
     attr_accessor :contact_ids
 
+    attr_accessor :agent_ids
+
     attr_accessor :conjunction_contact_ids
+
+    attr_accessor :conjunction_agent_ids
 
     class EnumAttributeValidator
       attr_reader :datatype
@@ -50,7 +54,9 @@ module DomainClient
         :'advertiser_type' => :'advertiserType',
         :'advertiser_id' => :'advertiserId',
         :'contact_ids' => :'contactIds',
-        :'conjunction_contact_ids' => :'conjunctionContactIds'
+        :'agent_ids' => :'agentIds',
+        :'conjunction_contact_ids' => :'conjunctionContactIds',
+        :'conjunction_agent_ids' => :'conjunctionAgentIds'
       }
     end
 
@@ -60,7 +66,9 @@ module DomainClient
         :'advertiser_type' => :'String',
         :'advertiser_id' => :'Integer',
         :'contact_ids' => :'Array<Integer>',
-        :'conjunction_contact_ids' => :'Array<Integer>'
+        :'agent_ids' => :'Array<String>',
+        :'conjunction_contact_ids' => :'Array<Integer>',
+        :'conjunction_agent_ids' => :'Array<String>'
       }
     end
 
@@ -86,9 +94,21 @@ module DomainClient
         end
       end
 
+      if attributes.has_key?(:'agentIds')
+        if (value = attributes[:'agentIds']).is_a?(Array)
+          self.agent_ids = value
+        end
+      end
+
       if attributes.has_key?(:'conjunctionContactIds')
         if (value = attributes[:'conjunctionContactIds']).is_a?(Array)
           self.conjunction_contact_ids = value
+        end
+      end
+
+      if attributes.has_key?(:'conjunctionAgentIds')
+        if (value = attributes[:'conjunctionAgentIds']).is_a?(Array)
+          self.conjunction_agent_ids = value
         end
       end
     end
@@ -126,7 +146,9 @@ module DomainClient
           advertiser_type == o.advertiser_type &&
           advertiser_id == o.advertiser_id &&
           contact_ids == o.contact_ids &&
-          conjunction_contact_ids == o.conjunction_contact_ids
+          agent_ids == o.agent_ids &&
+          conjunction_contact_ids == o.conjunction_contact_ids &&
+          conjunction_agent_ids == o.conjunction_agent_ids
     end
 
     # @see the `==` method
@@ -138,7 +160,7 @@ module DomainClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [advertiser_type, advertiser_id, contact_ids, conjunction_contact_ids].hash
+      [advertiser_type, advertiser_id, contact_ids, agent_ids, conjunction_contact_ids, conjunction_agent_ids].hash
     end
 
     # Builds the object from hash

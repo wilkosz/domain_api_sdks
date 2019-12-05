@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | **String** |  | [optional] 
 **project_profile_type** | **String** |  | [optional] 
 **property_types** | **Array&lt;String&gt;** |  | [optional] 
 **id** | **Integer** |  | [optional] 

@@ -14,8 +14,6 @@ require 'date'
 
 module DomainClient
   class DomainListingsServiceV2ModelDomainListingsApiModelQueryResultsProjectsProjectV2
-    attr_accessor :status
-
     attr_accessor :project_profile_type
 
     attr_accessor :property_types
@@ -117,7 +115,6 @@ module DomainClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'status' => :'status',
         :'project_profile_type' => :'projectProfileType',
         :'property_types' => :'propertyTypes',
         :'id' => :'id',
@@ -162,7 +159,6 @@ module DomainClient
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'status' => :'String',
         :'project_profile_type' => :'String',
         :'property_types' => :'Array<String>',
         :'id' => :'Integer',
@@ -211,10 +207,6 @@ module DomainClient
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
-
-      if attributes.has_key?(:'status')
-        self.status = attributes[:'status']
-      end
 
       if attributes.has_key?(:'projectProfileType')
         self.project_profile_type = attributes[:'projectProfileType']
@@ -387,21 +379,9 @@ module DomainClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      status_validator = EnumAttributeValidator.new('String', ['unknown', 'archived', 'underOffer', 'sold', 'leased', 'newDevelopment', 'recentlyUpdated', 'new', 'live', 'pending', 'depositTaken'])
-      return false unless status_validator.valid?(@status)
       project_profile_type_validator = EnumAttributeValidator.new('String', ['noProfile', 'projectProfileStandard', 'projectProfilePremium'])
       return false unless project_profile_type_validator.valid?(@project_profile_type)
       true
-    end
-
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] status Object to be assigned
-    def status=(status)
-      validator = EnumAttributeValidator.new('String', ['unknown', 'archived', 'underOffer', 'sold', 'leased', 'newDevelopment', 'recentlyUpdated', 'new', 'live', 'pending', 'depositTaken'])
-      unless validator.valid?(status)
-        fail ArgumentError, 'invalid value for "status", must be one of #{validator.allowable_values}.'
-      end
-      @status = status
     end
 
     # Custom attribute writer method checking allowed values (enum).
@@ -419,7 +399,6 @@ module DomainClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          status == o.status &&
           project_profile_type == o.project_profile_type &&
           property_types == o.property_types &&
           id == o.id &&
@@ -469,7 +448,7 @@ module DomainClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [status, project_profile_type, property_types, id, name, start_date, end_date, address, viewing_address, displayable_address, enquiry_email_address, advertiser_identifiers, provider_details, media, project_url, headline, tagline, display_as_last_updated, modified_by, modified_date, created_by, created_date, background_colour, description, appointment_required, features, price_from, price_to, banner_url, big_banner_url, small_banner_url, logo_url, pdfs, inspection_details, number_of_floors, number_of_apartments, estimated_completion_date, starting_price, is_active].hash
+      [project_profile_type, property_types, id, name, start_date, end_date, address, viewing_address, displayable_address, enquiry_email_address, advertiser_identifiers, provider_details, media, project_url, headline, tagline, display_as_last_updated, modified_by, modified_date, created_by, created_date, background_colour, description, appointment_required, features, price_from, price_to, banner_url, big_banner_url, small_banner_url, logo_url, pdfs, inspection_details, number_of_floors, number_of_apartments, estimated_completion_date, starting_price, is_active].hash
     end
 
     # Builds the object from hash

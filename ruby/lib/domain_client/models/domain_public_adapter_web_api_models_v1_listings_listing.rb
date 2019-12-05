@@ -66,6 +66,9 @@ module DomainClient
     # When minor update applied to listing
     attr_accessor :date_minor_updated
 
+    # The date/time the listing was first listed
+    attr_accessor :date_listed
+
     # The date/time the listing was purged.
     attr_accessor :date_purged
 
@@ -119,9 +122,6 @@ module DomainClient
 
     # The sale detail's of the property in case of it being for sale or sold
     attr_accessor :sale_details
-
-    # Indicates if the listing has been deleted
-    attr_accessor :deleted
 
     # Indicates if the property has been withdrawn               from the market
     attr_accessor :is_withdrawn
@@ -189,6 +189,7 @@ module DomainClient
         :'date_created' => :'dateCreated',
         :'date_updated' => :'dateUpdated',
         :'date_minor_updated' => :'dateMinorUpdated',
+        :'date_listed' => :'dateListed',
         :'date_purged' => :'datePurged',
         :'description' => :'description',
         :'dev_project_id' => :'devProjectId',
@@ -207,7 +208,6 @@ module DomainClient
         :'provider_details' => :'providerDetails',
         :'rental_details' => :'rentalDetails',
         :'sale_details' => :'saleDetails',
-        :'deleted' => :'deleted',
         :'is_withdrawn' => :'isWithdrawn',
         :'seo_url' => :'seoUrl',
         :'error_message' => :'errorMessage',
@@ -239,6 +239,7 @@ module DomainClient
         :'date_created' => :'DateTime',
         :'date_updated' => :'DateTime',
         :'date_minor_updated' => :'DateTime',
+        :'date_listed' => :'DateTime',
         :'date_purged' => :'DateTime',
         :'description' => :'String',
         :'dev_project_id' => :'Integer',
@@ -257,7 +258,6 @@ module DomainClient
         :'provider_details' => :'DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingProviderDetails',
         :'rental_details' => :'DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingRentalDetails',
         :'sale_details' => :'DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingSaleDetails',
-        :'deleted' => :'BOOLEAN',
         :'is_withdrawn' => :'BOOLEAN',
         :'seo_url' => :'String',
         :'error_message' => :'String',
@@ -347,6 +347,10 @@ module DomainClient
         self.date_minor_updated = attributes[:'dateMinorUpdated']
       end
 
+      if attributes.has_key?(:'dateListed')
+        self.date_listed = attributes[:'dateListed']
+      end
+
       if attributes.has_key?(:'datePurged')
         self.date_purged = attributes[:'datePurged']
       end
@@ -421,10 +425,6 @@ module DomainClient
 
       if attributes.has_key?(:'saleDetails')
         self.sale_details = attributes[:'saleDetails']
-      end
-
-      if attributes.has_key?(:'deleted')
-        self.deleted = attributes[:'deleted']
       end
 
       if attributes.has_key?(:'isWithdrawn')
@@ -545,6 +545,7 @@ module DomainClient
           date_created == o.date_created &&
           date_updated == o.date_updated &&
           date_minor_updated == o.date_minor_updated &&
+          date_listed == o.date_listed &&
           date_purged == o.date_purged &&
           description == o.description &&
           dev_project_id == o.dev_project_id &&
@@ -563,7 +564,6 @@ module DomainClient
           provider_details == o.provider_details &&
           rental_details == o.rental_details &&
           sale_details == o.sale_details &&
-          deleted == o.deleted &&
           is_withdrawn == o.is_withdrawn &&
           seo_url == o.seo_url &&
           error_message == o.error_message &&
@@ -583,7 +583,7 @@ module DomainClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [objective, property_types, status, sale_mode, channel, address_parts, advertiser_identifiers, apm_identifiers, bathrooms, bedrooms, building_area, building_area_sqm, carspaces, date_available, date_created, date_updated, date_minor_updated, date_purged, description, dev_project_id, energy_efficiency_rating, features, geo_location, headline, id, inspection_details, is_new_development, land_area, land_area_sqm, media, price_details, property_id, provider_details, rental_details, sale_details, deleted, is_withdrawn, seo_url, error_message, virtual_tour_url, homepass_enabled, statement_of_information, number_of_dwellings, highlights].hash
+      [objective, property_types, status, sale_mode, channel, address_parts, advertiser_identifiers, apm_identifiers, bathrooms, bedrooms, building_area, building_area_sqm, carspaces, date_available, date_created, date_updated, date_minor_updated, date_listed, date_purged, description, dev_project_id, energy_efficiency_rating, features, geo_location, headline, id, inspection_details, is_new_development, land_area, land_area_sqm, media, price_details, property_id, provider_details, rental_details, sale_details, is_withdrawn, seo_url, error_message, virtual_tour_url, homepass_enabled, statement_of_information, number_of_dwellings, highlights].hash
     end
 
     # Builds the object from hash

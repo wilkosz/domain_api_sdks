@@ -120,16 +120,4 @@ describe 'DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingP
     end
   end
 
-  describe 'test attribute "price_from_per_sqm"' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  describe 'test attribute "price_to_per_sqm"' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
 end
